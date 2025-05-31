@@ -11,20 +11,24 @@ This repository contains a solution for the Black Box Challenge - reverse-engine
 ### Quick Setup for Evaluators
 ```bash
 # Clone the repository
-git clone <your-repo-url>
-cd black-box-challenge-submission
+git clone https://github.com/kelapure/black-box-challenge-solution.git
+cd black-box-challenge-solution
 
-# Create virtual environment (recommended)
+# Create virtual environment (REQUIRED for model files)
 python3 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Install dependencies
+# Install dependencies (REQUIRED for scikit-learn/pandas)
 pip install -r requirements.txt
 
-# Make run script executable
+# Make scripts executable
 chmod +x run.sh
+chmod +x eval.sh
 
-# Test the solution
+# Run evaluation (this calls run.sh internally)
+./eval.sh
+
+# Or test individual cases
 ./run.sh 5 250 150.75
 # Expected output: 925.38
 ```
