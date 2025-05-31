@@ -7,13 +7,34 @@ This repository contains the complete solution for the Black Box Challenge - suc
 ## Quick Start
 
 ### Prerequisites
-- Python 3.x
-- Required packages: pandas, scikit-learn, numpy, pickle
+- Python 3.7+
+- pip (Python package manager)
 
-### Installation
+### Quick Setup for Evaluators
 ```bash
+# Clone the repository
+git clone <your-repo-url>
+cd black-box-challenge-submission
+
+# Create virtual environment (recommended)
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
 # Install dependencies
-pip install pandas scikit-learn numpy
+pip install -r requirements.txt
+
+# Make run script executable
+chmod +x run.sh
+
+# Test the solution
+./run.sh 5 250 150.75
+# Expected output: 925.38
+```
+
+### Alternative Setup (System-wide installation)
+```bash
+# If you prefer system-wide installation
+pip install pandas==2.2.3 scikit-learn==1.6.1 numpy==2.2.6
 
 # Make run script executable
 chmod +x run.sh
@@ -58,6 +79,16 @@ chmod +x run.sh
    - Sweet spot trip rewards
    - Big trip jackpots
 
+## Dependencies
+
+The solution requires the following Python packages (see `requirements.txt`):
+- **pandas**: Data manipulation and analysis
+- **scikit-learn**: Machine learning library (Decision Tree model)
+- **numpy**: Numerical computing
+- **pickle**: Model serialization (built-in)
+
+All dependencies are pinned to specific versions for reproducibility.
+
 ## Files Description
 
 ### Core Implementation
@@ -65,10 +96,14 @@ chmod +x run.sh
 - `calculate_reimbursement_final.py` - Production calculation implementation
 - `best_model.pkl` - Trained Decision Tree model (100% accuracy)
 - `feature_names.pkl` - Feature engineering pipeline metadata
+- `requirements.txt` - Python dependencies with pinned versions
 
 ### Documentation
 - `SOLUTION_REPORT.md` - Detailed technical report and methodology
 - `README.md` - This file
+
+### Setup Files
+- `venv/` - Virtual environment (created during setup)
 
 ## Model Architecture
 
