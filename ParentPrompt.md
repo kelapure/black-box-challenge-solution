@@ -50,3 +50,29 @@ Run ./eval.sh to test your solution against all 1,000 cases. The script will sho
 Your submission will be tested against 5,000 additional cases that are not included in test_cases.json.
 
 -- BLACK BOX CHALLENGE END --
+---
+Followup Answer
+
+vailable Resources: 
+1. Yes access to test_cases.json will be provided when claude code is run in the repo
+2. Yes you will have access to the PRD Product Requirements Document and employee interview transcripts mentioned in the challenge when run in the repo with claude. code
+3. No . You will need to figure this out from the execution
+
+Technical Constraints: 
+1. Use python for programming language for the implementation
+2. Design the solution that will give the BEST outcome for the challenge. I dont care if it is parallel or sequential 
+3. There are no libraries or frameworks that you should avoid. Your job is to solve the challenge perfectly per the rules of the black box.
+
+Evaluation Criteria: 
+1. YES you Should design for generalization beyond the 1,000 training cases if it helps the accuracy and completeness of the solution.
+2. I would like to hit the highest level of accuracy possible 
+3. I am not sure. you decide. pick the best option. 
+
+Business Context: 
+* Stick to facts. do not make up any business context that is note explicitly provided.
+* We dont know the era/decade the system was designed in
+
+Data Science Approach: 
+* YES Consider both rule-based reverse engineering AND machine learning approaches
+* I DONT KNOW if there are known discontinuities or special cases in the legacy system
+
