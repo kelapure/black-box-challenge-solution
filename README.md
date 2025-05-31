@@ -1,8 +1,6 @@
 # Black Box Challenge Solution
 
-## 🎉 **100% Exact Match Achievement**
-
-This repository contains the complete solution for the Black Box Challenge - successfully reverse-engineering a 60-year-old legacy travel reimbursement system with **100% exact matches** on all test cases.
+This repository contains a solution for the Black Box Challenge - reverse-engineering a 60-year-old legacy travel reimbursement system using machine learning.
 
 ## Quick Start
 
@@ -47,32 +45,24 @@ chmod +x run.sh
 
 # Example
 ./run.sh 5 250 150.75
-# Output: 710.02
+# Output: 925.38
 ```
 
-## Solution Overview
+## How It Works
 
-### Performance Results
-- **Exact Matches**: 100% (1000/1000 test cases)
-- **Mean Absolute Error**: $0.00
-- **Model Type**: Decision Tree Regressor with Enhanced Feature Engineering
+This solution uses a machine learning approach to figure out the legacy system's rules.
 
 ### Technical Approach
 
-1. **Data Analysis**: Comprehensive exploration of 1000 historical reimbursement cases
-2. **Feature Engineering**: Created 27 enhanced features including:
-   - Interaction features (days×miles, days×receipts, miles×receipts)
-   - Ratio features (miles/day, receipts/day, receipts/mile)
-   - Business logic features (sweet spot trips, efficiency bonuses)
-   - Polynomial and categorical features
+1. **Data Analysis**: Looked at 1,000 historical reimbursement cases to find patterns
+2. **Feature Engineering**: Created additional features from the basic inputs:
+   - Combined features (days×miles, days×receipts, miles×receipts)
+   - Ratios (miles per day, receipts per day, receipts per mile)
+   - Business rules (trip length categories, efficiency bonuses)
 
-3. **Model Selection**: Tested multiple algorithms:
-   - Linear/Ridge Regression: 0-0.1% exact matches
-   - Random Forest: 0% exact matches  
-   - Gradient Boosting: 10.1% exact matches
-   - **Decision Tree**: **100% exact matches** ✅
+3. **Model Selection**: Tried different machine learning models and found that a Decision Tree worked best
 
-4. **Business Logic Discovery**: Successfully reverse-engineered complex legacy rules including:
+4. **Pattern Discovery**: The model learned business rules like:
    - Per diem calculations
    - Mileage reimbursements
    - Efficiency bonuses
@@ -134,22 +124,12 @@ Output: reimbursement_amount (rounded to 2 decimal places)
 - `receipts_per_day`: Daily expense rate
 - `receipts_per_mile`: Expense efficiency
 
-## Performance Verification
-
-The model achieves perfect accuracy on the training dataset:
-```bash
-# Test with sample cases
-./run.sh 2 12 8.36     # Expected: 185.43, Got: 185.43 ✅
-./run.sh 5 250 150.75  # Expected: 710.02, Got: 710.02 ✅
-./run.sh 8 600 1200    # Expected: 1750.50, Got: 1750.50 ✅
-```
-
 ## Implementation Notes
 
-- **Deterministic System**: The legacy system follows deterministic rules, making 100% accuracy achievable
-- **Feature Engineering**: The breakthrough came from creating business-logic-aware features
-- **Model Choice**: Decision Tree proved optimal for capturing the complex rule-based logic
-- **Production Ready**: Includes error handling and fallback mechanisms
+- The solution works by learning patterns from historical data
+- Uses feature engineering to help the model understand business logic
+- Decision Tree model was chosen because it works well for rule-based systems
+- Includes error handling and fallback logic for reliability
 
 ## License
 
@@ -157,5 +137,4 @@ MIT License - see `LICENSE` file for details.
 
 ---
 
-**Score Achieved**: 100% exact matches (1000/1000 test cases)  
-**Status**: ✅ Complete and ready for validation on unseen test cases
+A solution for the Black Box Challenge that attempts to reverse-engineer the legacy reimbursement system.
