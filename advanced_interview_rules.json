@@ -1,0 +1,162 @@
+{
+  "interview_insights": {
+    "john": {
+      "dayton_columbus_distance": 90,
+      "indianapolis_cincinnati_distance": 120,
+      "mileage_rate_drop_percentage": 35,
+      "nashville_distance": 300,
+      "chicago_rental_miles": 40,
+      "marcus_lightning_miles": 400,
+      "marcus_lightning_days": 2,
+      "milwaukee_training_miles": 20,
+      "milwaukee_training_days": 7,
+      "excel_simulator_accuracy": 12,
+      "omaha_days": 6,
+      "akron_days": 2
+    },
+    "peggy": {
+      "myrtle_beach_year_started": 1998,
+      "cleveland_nights": 3,
+      "panera_portion": 0.5,
+      "san_jose_amount": 2400,
+      "san_jose_duration": 7,
+      "akron_nights": 2,
+      "charlotte_nights": 5,
+      "charlotte_walking": true,
+      "denver_days": 10,
+      "denver_daily_spending": 180,
+      "phoenix_daily_spending": 60,
+      "kyle_receipts": 8.5,
+      "kyle_duration": 1,
+      "sweet_spot_days": [
+        5,
+        6
+      ],
+      "myrtle_humidity_month": "May"
+    },
+    "tom": {
+      "schnauzer_litter_count": 6,
+      "schnauzer_colors": {
+        "silver": 4,
+        "pepper_salt": 2
+      },
+      "breeding_start_year": 2009,
+      "seattle_chicago_days": 9,
+      "tampa_director_days": 5,
+      "little_rock_miles": 600,
+      "st_louis_miles": 250,
+      "candidate_tour_miles": 700,
+      "candidate_tour_days": 3,
+      "dinner_receipt": 199.99,
+      "weird_adjustment": 1.02,
+      "timing_sensitivity": true
+    },
+    "sarah": {
+      "coordination_people": 40,
+      "coordination_states": 5,
+      "sprint_trip_days": 2,
+      "sprint_trip_locations": 3,
+      "sprint_bonus_percentage": 20,
+      "phoenix_week_days": 7,
+      "sales_director_cities": 4,
+      "sales_director_days": 3,
+      "sales_director_miles": 800,
+      "sales_director_daily_spending": 250,
+      "modest_director_daily_spending": 80,
+      "cleveland_days": 2,
+      "cleveland_receipts": 150,
+      "janet_days": 8,
+      "janet_miles": 900,
+      "janet_receipts": 1200,
+      "janet_bonus_percentage": 25,
+      "end_of_quarter_generosity": true,
+      "mid_fiscal_year_tightness": true
+    }
+  },
+  "extracted_rules": {
+    "john_90_120_mile_difference": {
+      "miles_90_bias": 117.31822222222223,
+      "miles_120_bias": 99.87288888888888,
+      "difference": -17.445333333333352,
+      "source": "John interview - Dayton/Columbus vs Indianapolis/Cincinnati example"
+    },
+    "marcus_lightning_pattern": {
+      "pattern": "2 days, 350-450 miles (high intensity)",
+      "residual_bias": -29.484761904761893,
+      "trips_affected": 21,
+      "source": "John interview - Marcus lightning road trips"
+    },
+    "milwaukee_training_pattern": {
+      "pattern": "6+ days, \u226430 miles (minimal travel)",
+      "residual_bias": 154.06172413793104,
+      "trips_affected": 58,
+      "source": "John interview - Milwaukee week-long training example"
+    },
+    "cleveland_pattern": {
+      "pattern": "3 days, <$100 receipts",
+      "residual_bias": 73.18333333333334,
+      "trips_affected": 45,
+      "source": "Peggy interview - Cleveland 3-night minimal expense example"
+    },
+    "san_jose_pattern": {
+      "pattern": "7 days, $2200-2600 receipts",
+      "residual_bias": 59.325312499999995,
+      "trips_affected": 32,
+      "source": "Peggy interview - San Jose conference week example"
+    },
+    "denver_vs_phoenix_spending": {
+      "denver_pattern": "10 days, $170-190/day",
+      "phoenix_pattern": "8-12 days, $50-70/day",
+      "denver_bias": -37.44538461538463,
+      "phoenix_bias": -2.3457718120805398,
+      "spending_penalty_difference": -35.09961280330409,
+      "source": "Peggy interview - Denver vs Phoenix spending comparison"
+    },
+    "kyle_minimal_pattern": {
+      "pattern": "1 day, <$10 receipts",
+      "residual_bias": -36.07333333333334,
+      "trips_affected": 18,
+      "source": "Peggy interview - Kyle procurement workshop example"
+    },
+    "sarah_sprint_trip_bonus": {
+      "pattern": "2 days, \u2265200 miles/day (high intensity)",
+      "residual_bias": 18.390655737704922,
+      "trips_affected": 244,
+      "expected_bonus_pct": 20,
+      "source": "Sarah interview - sprint trip pattern with 20% bonus"
+    },
+    "sarah_cleveland_minimal_penalty": {
+      "pattern": "2 days, ~$150 receipts, <100 miles",
+      "residual_bias": -223.70999999999998,
+      "trips_affected": 1,
+      "source": "Sarah interview - Cleveland minimal trip example"
+    },
+    "conditional_logic": {
+      "long_trip_lifestyle_penalty": {
+        "condition": "trip_days >= 6 AND receipts_per_day > 75th percentile",
+        "effect": -60.75497206703911,
+        "affected_trips": 179,
+        "source": "John interview conditional logic"
+      },
+      "triple_condition_jackpot": {
+        "condition": "days >= 7 AND miles >= 800 AND receipts >= $1000",
+        "effect": 92.14262458471761,
+        "affected_trips": 602,
+        "source": "Sarah interview - triple condition massive bonus"
+      }
+    },
+    "vague_quantifications": {
+      "sweet_spot_day_7": {
+        "days": 7,
+        "bonus": 90.06599135135136,
+        "affected_trips": 375,
+        "source": "Peggy interview - sweet spot quantification"
+      }
+    }
+  },
+  "extraction_summary": {
+    "total_rule_categories": 11,
+    "total_quantitative_insights": 58,
+    "precision_improvement_potential": "High - specific scenarios and thresholds identified"
+  }
+}

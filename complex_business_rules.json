@@ -1,0 +1,780 @@
+{
+  "tier_systems": {
+    "miles_tier_system": {
+      "ultra_short": {
+        "range": [
+          0,
+          50
+        ],
+        "effect": 143.44256485714286,
+        "count": 140,
+        "description": "Miles tier 0-50"
+      },
+      "short": {
+        "range": [
+          50,
+          100
+        ],
+        "effect": 89.46429988018434,
+        "count": 217,
+        "description": "Miles tier 50-100"
+      },
+      "medium_short": {
+        "range": [
+          100,
+          200
+        ],
+        "effect": 72.23086269529652,
+        "count": 489,
+        "description": "Miles tier 100-200"
+      },
+      "medium": {
+        "range": [
+          200,
+          300
+        ],
+        "effect": 28.117756549878344,
+        "count": 411,
+        "description": "Miles tier 200-300"
+      },
+      "medium_long": {
+        "range": [
+          300,
+          500
+        ],
+        "effect": -13.018104960784312,
+        "count": 816,
+        "description": "Miles tier 300-500"
+      },
+      "long": {
+        "range": [
+          500,
+          800
+        ],
+        "effect": -54.09996062910798,
+        "count": 1278,
+        "description": "Miles tier 500-800"
+      }
+    },
+    "receipt_tier_system": {
+      "minimal": {
+        "range": [
+          0,
+          100
+        ],
+        "effect": 14.974095553719016,
+        "count": 242,
+        "description": "Receipt tier $0-100"
+      },
+      "low": {
+        "range": [
+          100,
+          300
+        ],
+        "effect": -219.73703254545453,
+        "count": 440,
+        "description": "Receipt tier $100-300"
+      },
+      "moderate": {
+        "range": [
+          300,
+          600
+        ],
+        "effect": -79.53261299222396,
+        "count": 643,
+        "description": "Receipt tier $300-600"
+      },
+      "standard": {
+        "range": [
+          600,
+          1000
+        ],
+        "effect": 92.35226485714284,
+        "count": 875,
+        "description": "Receipt tier $600-1000"
+      },
+      "high": {
+        "range": [
+          1000,
+          1500
+        ],
+        "effect": 158.4198151000972,
+        "count": 1029,
+        "description": "Receipt tier $1000-1500"
+      },
+      "luxury": {
+        "range": [
+          2000,
+          2500
+        ],
+        "effect": -111.23445146437348,
+        "count": 814,
+        "description": "Receipt tier $2000-2500"
+      }
+    },
+    "days_tier_system": {
+      "day_1": {
+        "days": 1,
+        "effect": -25.84715371801566,
+        "count": 383,
+        "description": "1-day trip adjustment"
+      },
+      "day_2": {
+        "days": 2,
+        "effect": 17.666828666666667,
+        "count": 375,
+        "description": "2-day trip adjustment"
+      },
+      "day_4": {
+        "days": 4,
+        "effect": -21.68213098013245,
+        "count": 302,
+        "description": "4-day trip adjustment"
+      },
+      "day_6": {
+        "days": 6,
+        "effect": -47.72573514285714,
+        "count": 350,
+        "description": "6-day trip adjustment"
+      },
+      "day_7": {
+        "days": 7,
+        "effect": 83.311042,
+        "count": 375,
+        "description": "7-day trip adjustment"
+      },
+      "day_8": {
+        "days": 8,
+        "effect": -30.266360051282042,
+        "count": 390,
+        "description": "8-day trip adjustment"
+      },
+      "day_11": {
+        "days": 11,
+        "effect": 22.75988866666666,
+        "count": 300,
+        "description": "11-day trip adjustment"
+      },
+      "day_13": {
+        "days": 13,
+        "effect": 36.53246637869822,
+        "count": 338,
+        "description": "13-day trip adjustment"
+      },
+      "day_14": {
+        "days": 14,
+        "effect": 18.473049147766325,
+        "count": 291,
+        "description": "14-day trip adjustment"
+      }
+    }
+  },
+  "interaction_rules": {
+    "three_way_interactions": {
+      "ShortDays_LowMiles_MediumReceipts": {
+        "days_category": "Short",
+        "miles_category": "Low",
+        "receipts_category": "Medium",
+        "effect": 159.98470460869567,
+        "count": 69,
+        "description": "Three-way interaction: ShortDays_LowMiles_MediumReceipts"
+      },
+      "ShortDays_LowMiles_HighReceipts": {
+        "days_category": "Short",
+        "miles_category": "Low",
+        "receipts_category": "High",
+        "effect": 151.54036317647058,
+        "count": 68,
+        "description": "Three-way interaction: ShortDays_LowMiles_HighReceipts"
+      },
+      "ShortDays_MediumMiles_LowReceipts": {
+        "days_category": "Short",
+        "miles_category": "Medium",
+        "receipts_category": "Low",
+        "effect": -188.48919564705884,
+        "count": 68,
+        "description": "Three-way interaction: ShortDays_MediumMiles_LowReceipts"
+      },
+      "ShortDays_MediumMiles_MediumReceipts": {
+        "days_category": "Short",
+        "miles_category": "Medium",
+        "receipts_category": "Medium",
+        "effect": 64.76703043373493,
+        "count": 83,
+        "description": "Three-way interaction: ShortDays_MediumMiles_MediumReceipts"
+      },
+      "ShortDays_MediumMiles_HighReceipts": {
+        "days_category": "Short",
+        "miles_category": "Medium",
+        "receipts_category": "High",
+        "effect": 41.35341597590364,
+        "count": 83,
+        "description": "Three-way interaction: ShortDays_MediumMiles_HighReceipts"
+      },
+      "ShortDays_MediumMiles_VeryHighReceipts": {
+        "days_category": "Short",
+        "miles_category": "Medium",
+        "receipts_category": "VeryHigh",
+        "effect": -135.635078,
+        "count": 44,
+        "description": "Three-way interaction: ShortDays_MediumMiles_VeryHighReceipts"
+      },
+      "ShortDays_HighMiles_LowReceipts": {
+        "days_category": "Short",
+        "miles_category": "High",
+        "receipts_category": "Low",
+        "effect": -98.93060431578948,
+        "count": 95,
+        "description": "Three-way interaction: ShortDays_HighMiles_LowReceipts"
+      },
+      "ShortDays_HighMiles_MediumReceipts": {
+        "days_category": "Short",
+        "miles_category": "High",
+        "receipts_category": "Medium",
+        "effect": 133.46992200000003,
+        "count": 129,
+        "description": "Three-way interaction: ShortDays_HighMiles_MediumReceipts"
+      },
+      "ShortDays_HighMiles_VeryHighReceipts": {
+        "days_category": "Short",
+        "miles_category": "High",
+        "receipts_category": "VeryHigh",
+        "effect": -127.87680527272727,
+        "count": 55,
+        "description": "Three-way interaction: ShortDays_HighMiles_VeryHighReceipts"
+      },
+      "ShortDays_VeryHighMiles_LowReceipts": {
+        "days_category": "Short",
+        "miles_category": "VeryHigh",
+        "receipts_category": "Low",
+        "effect": -142.49174466666668,
+        "count": 48,
+        "description": "Three-way interaction: ShortDays_VeryHighMiles_LowReceipts"
+      },
+      "ShortDays_VeryHighMiles_MediumReceipts": {
+        "days_category": "Short",
+        "miles_category": "VeryHigh",
+        "receipts_category": "Medium",
+        "effect": 83.66298322448976,
+        "count": 49,
+        "description": "Three-way interaction: ShortDays_VeryHighMiles_MediumReceipts"
+      },
+      "ShortDays_VeryHighMiles_HighReceipts": {
+        "days_category": "Short",
+        "miles_category": "VeryHigh",
+        "receipts_category": "High",
+        "effect": -58.443078000000014,
+        "count": 50,
+        "description": "Three-way interaction: ShortDays_VeryHighMiles_HighReceipts"
+      },
+      "ShortDays_VeryHighMiles_VeryHighReceipts": {
+        "days_category": "Short",
+        "miles_category": "VeryHigh",
+        "receipts_category": "VeryHigh",
+        "effect": -266.3673752972974,
+        "count": 37,
+        "description": "Three-way interaction: ShortDays_VeryHighMiles_VeryHighReceipts"
+      },
+      "MediumDays_LowMiles_LowReceipts": {
+        "days_category": "Medium",
+        "miles_category": "Low",
+        "receipts_category": "Low",
+        "effect": -111.27937624561406,
+        "count": 57,
+        "description": "Three-way interaction: MediumDays_LowMiles_LowReceipts"
+      },
+      "MediumDays_LowMiles_MediumReceipts": {
+        "days_category": "Medium",
+        "miles_category": "Low",
+        "receipts_category": "Medium",
+        "effect": 179.17404571134023,
+        "count": 97,
+        "description": "Three-way interaction: MediumDays_LowMiles_MediumReceipts"
+      },
+      "MediumDays_LowMiles_HighReceipts": {
+        "days_category": "Medium",
+        "miles_category": "Low",
+        "receipts_category": "High",
+        "effect": 162.95511187341774,
+        "count": 79,
+        "description": "Three-way interaction: MediumDays_LowMiles_HighReceipts"
+      },
+      "MediumDays_LowMiles_VeryHighReceipts": {
+        "days_category": "Medium",
+        "miles_category": "Low",
+        "receipts_category": "VeryHigh",
+        "effect": 46.91928370212765,
+        "count": 47,
+        "description": "Three-way interaction: MediumDays_LowMiles_VeryHighReceipts"
+      },
+      "MediumDays_MediumMiles_LowReceipts": {
+        "days_category": "Medium",
+        "miles_category": "Medium",
+        "receipts_category": "Low",
+        "effect": -131.67056187096773,
+        "count": 62,
+        "description": "Three-way interaction: MediumDays_MediumMiles_LowReceipts"
+      },
+      "MediumDays_MediumMiles_HighReceipts": {
+        "days_category": "Medium",
+        "miles_category": "Medium",
+        "receipts_category": "High",
+        "effect": 43.54981210989011,
+        "count": 91,
+        "description": "Three-way interaction: MediumDays_MediumMiles_HighReceipts"
+      },
+      "MediumDays_MediumMiles_VeryHighReceipts": {
+        "days_category": "Medium",
+        "miles_category": "Medium",
+        "receipts_category": "VeryHigh",
+        "effect": -107.31680527272727,
+        "count": 55,
+        "description": "Three-way interaction: MediumDays_MediumMiles_VeryHighReceipts"
+      },
+      "MediumDays_HighMiles_LowReceipts": {
+        "days_category": "Medium",
+        "miles_category": "High",
+        "receipts_category": "Low",
+        "effect": -218.19150657142856,
+        "count": 84,
+        "description": "Three-way interaction: MediumDays_HighMiles_LowReceipts"
+      },
+      "MediumDays_HighMiles_MediumReceipts": {
+        "days_category": "Medium",
+        "miles_category": "High",
+        "receipts_category": "Medium",
+        "effect": 38.605112839694655,
+        "count": 131,
+        "description": "Three-way interaction: MediumDays_HighMiles_MediumReceipts"
+      },
+      "MediumDays_HighMiles_HighReceipts": {
+        "days_category": "Medium",
+        "miles_category": "High",
+        "receipts_category": "High",
+        "effect": -75.85460431578949,
+        "count": 95,
+        "description": "Three-way interaction: MediumDays_HighMiles_HighReceipts"
+      },
+      "MediumDays_HighMiles_VeryHighReceipts": {
+        "days_category": "Medium",
+        "miles_category": "High",
+        "receipts_category": "VeryHigh",
+        "effect": -219.32034466666667,
+        "count": 75,
+        "description": "Three-way interaction: MediumDays_HighMiles_VeryHighReceipts"
+      },
+      "MediumDays_VeryHighMiles_LowReceipts": {
+        "days_category": "Medium",
+        "miles_category": "VeryHigh",
+        "receipts_category": "Low",
+        "effect": -269.3445224444444,
+        "count": 27,
+        "description": "Three-way interaction: MediumDays_VeryHighMiles_LowReceipts"
+      },
+      "MediumDays_VeryHighMiles_MediumReceipts": {
+        "days_category": "Medium",
+        "miles_category": "VeryHigh",
+        "receipts_category": "Medium",
+        "effect": 132.54162931707316,
+        "count": 41,
+        "description": "Three-way interaction: MediumDays_VeryHighMiles_MediumReceipts"
+      },
+      "MediumDays_VeryHighMiles_HighReceipts": {
+        "days_category": "Medium",
+        "miles_category": "VeryHigh",
+        "receipts_category": "High",
+        "effect": -50.35641133333335,
+        "count": 60,
+        "description": "Three-way interaction: MediumDays_VeryHighMiles_HighReceipts"
+      },
+      "MediumDays_VeryHighMiles_VeryHighReceipts": {
+        "days_category": "Medium",
+        "miles_category": "VeryHigh",
+        "receipts_category": "VeryHigh",
+        "effect": -222.23556187096779,
+        "count": 31,
+        "description": "Three-way interaction: MediumDays_VeryHighMiles_VeryHighReceipts"
+      },
+      "LongDays_LowMiles_LowReceipts": {
+        "days_category": "Long",
+        "miles_category": "Low",
+        "receipts_category": "Low",
+        "effect": -158.96764210256404,
+        "count": 78,
+        "description": "Three-way interaction: LongDays_LowMiles_LowReceipts"
+      },
+      "LongDays_LowMiles_MediumReceipts": {
+        "days_category": "Long",
+        "miles_category": "Low",
+        "receipts_category": "Medium",
+        "effect": 109.77401723809523,
+        "count": 105,
+        "description": "Three-way interaction: LongDays_LowMiles_MediumReceipts"
+      },
+      "LongDays_LowMiles_HighReceipts": {
+        "days_category": "Long",
+        "miles_category": "Low",
+        "receipts_category": "High",
+        "effect": 149.63682465486727,
+        "count": 113,
+        "description": "Three-way interaction: LongDays_LowMiles_HighReceipts"
+      },
+      "LongDays_LowMiles_VeryHighReceipts": {
+        "days_category": "Long",
+        "miles_category": "Low",
+        "receipts_category": "VeryHigh",
+        "effect": 50.64212200000001,
+        "count": 50,
+        "description": "Three-way interaction: LongDays_LowMiles_VeryHighReceipts"
+      },
+      "LongDays_MediumMiles_LowReceipts": {
+        "days_category": "Long",
+        "miles_category": "Medium",
+        "receipts_category": "Low",
+        "effect": -121.38443697435899,
+        "count": 78,
+        "description": "Three-way interaction: LongDays_MediumMiles_LowReceipts"
+      },
+      "LongDays_MediumMiles_HighReceipts": {
+        "days_category": "Long",
+        "miles_category": "Medium",
+        "receipts_category": "High",
+        "effect": 49.632750282828276,
+        "count": 99,
+        "description": "Three-way interaction: LongDays_MediumMiles_HighReceipts"
+      },
+      "LongDays_MediumMiles_VeryHighReceipts": {
+        "days_category": "Long",
+        "miles_category": "Medium",
+        "receipts_category": "VeryHigh",
+        "effect": -100.1043637142857,
+        "count": 70,
+        "description": "Three-way interaction: LongDays_MediumMiles_VeryHighReceipts"
+      },
+      "LongDays_HighMiles_LowReceipts": {
+        "days_category": "Long",
+        "miles_category": "High",
+        "receipts_category": "Low",
+        "effect": -197.22476935802467,
+        "count": 81,
+        "description": "Three-way interaction: LongDays_HighMiles_LowReceipts"
+      },
+      "LongDays_HighMiles_MediumReceipts": {
+        "days_category": "Long",
+        "miles_category": "High",
+        "receipts_category": "Medium",
+        "effect": 120.66151140397352,
+        "count": 151,
+        "description": "Three-way interaction: LongDays_HighMiles_MediumReceipts"
+      },
+      "LongDays_HighMiles_VeryHighReceipts": {
+        "days_category": "Long",
+        "miles_category": "High",
+        "receipts_category": "VeryHigh",
+        "effect": -142.198578,
+        "count": 80,
+        "description": "Three-way interaction: LongDays_HighMiles_VeryHighReceipts"
+      },
+      "LongDays_VeryHighMiles_LowReceipts": {
+        "days_category": "Long",
+        "miles_category": "VeryHigh",
+        "receipts_category": "Low",
+        "effect": -220.969828,
+        "count": 40,
+        "description": "Three-way interaction: LongDays_VeryHighMiles_LowReceipts"
+      },
+      "LongDays_VeryHighMiles_MediumReceipts": {
+        "days_category": "Long",
+        "miles_category": "VeryHigh",
+        "receipts_category": "Medium",
+        "effect": 219.12722969230768,
+        "count": 78,
+        "description": "Three-way interaction: LongDays_VeryHighMiles_MediumReceipts"
+      },
+      "LongDays_VeryHighMiles_HighReceipts": {
+        "days_category": "Long",
+        "miles_category": "VeryHigh",
+        "receipts_category": "High",
+        "effect": 66.5582077142857,
+        "count": 105,
+        "description": "Three-way interaction: LongDays_VeryHighMiles_HighReceipts"
+      },
+      "LongDays_VeryHighMiles_VeryHighReceipts": {
+        "days_category": "Long",
+        "miles_category": "VeryHigh",
+        "receipts_category": "VeryHigh",
+        "effect": -167.28814251612906,
+        "count": 31,
+        "description": "Three-way interaction: LongDays_VeryHighMiles_VeryHighReceipts"
+      },
+      "VeryLongDays_LowMiles_LowReceipts": {
+        "days_category": "VeryLong",
+        "miles_category": "Low",
+        "receipts_category": "Low",
+        "effect": -91.97906105084743,
+        "count": 59,
+        "description": "Three-way interaction: VeryLongDays_LowMiles_LowReceipts"
+      },
+      "VeryLongDays_LowMiles_MediumReceipts": {
+        "days_category": "VeryLong",
+        "miles_category": "Low",
+        "receipts_category": "Medium",
+        "effect": 166.79023127835052,
+        "count": 97,
+        "description": "Three-way interaction: VeryLongDays_LowMiles_MediumReceipts"
+      },
+      "VeryLongDays_LowMiles_HighReceipts": {
+        "days_category": "VeryLong",
+        "miles_category": "Low",
+        "receipts_category": "High",
+        "effect": 124.41218615094337,
+        "count": 106,
+        "description": "Three-way interaction: VeryLongDays_LowMiles_HighReceipts"
+      },
+      "VeryLongDays_MediumMiles_LowReceipts": {
+        "days_category": "VeryLong",
+        "miles_category": "Medium",
+        "receipts_category": "Low",
+        "effect": -60.48052576119403,
+        "count": 67,
+        "description": "Three-way interaction: VeryLongDays_MediumMiles_LowReceipts"
+      },
+      "VeryLongDays_MediumMiles_MediumReceipts": {
+        "days_category": "VeryLong",
+        "miles_category": "Medium",
+        "receipts_category": "Medium",
+        "effect": 53.00329278651684,
+        "count": 89,
+        "description": "Three-way interaction: VeryLongDays_MediumMiles_MediumReceipts"
+      },
+      "VeryLongDays_MediumMiles_VeryHighReceipts": {
+        "days_category": "VeryLong",
+        "miles_category": "Medium",
+        "receipts_category": "VeryHigh",
+        "effect": -113.08191133333335,
+        "count": 60,
+        "description": "Three-way interaction: VeryLongDays_MediumMiles_VeryHighReceipts"
+      },
+      "VeryLongDays_HighMiles_LowReceipts": {
+        "days_category": "VeryLong",
+        "miles_category": "High",
+        "receipts_category": "Low",
+        "effect": -97.39722085714286,
+        "count": 63,
+        "description": "Three-way interaction: VeryLongDays_HighMiles_LowReceipts"
+      },
+      "VeryLongDays_HighMiles_MediumReceipts": {
+        "days_category": "VeryLong",
+        "miles_category": "High",
+        "receipts_category": "Medium",
+        "effect": 143.95680199999998,
+        "count": 125,
+        "description": "Three-way interaction: VeryLongDays_HighMiles_MediumReceipts"
+      },
+      "VeryLongDays_HighMiles_VeryHighReceipts": {
+        "days_category": "VeryLong",
+        "miles_category": "High",
+        "receipts_category": "VeryHigh",
+        "effect": -177.68761646153848,
+        "count": 65,
+        "description": "Three-way interaction: VeryLongDays_HighMiles_VeryHighReceipts"
+      },
+      "VeryLongDays_VeryHighMiles_LowReceipts": {
+        "days_category": "VeryLong",
+        "miles_category": "VeryHigh",
+        "receipts_category": "Low",
+        "effect": -125.8759870909091,
+        "count": 44,
+        "description": "Three-way interaction: VeryLongDays_VeryHighMiles_LowReceipts"
+      },
+      "VeryLongDays_VeryHighMiles_MediumReceipts": {
+        "days_category": "VeryLong",
+        "miles_category": "VeryHigh",
+        "receipts_category": "Medium",
+        "effect": 217.93677385185188,
+        "count": 54,
+        "description": "Three-way interaction: VeryLongDays_VeryHighMiles_MediumReceipts"
+      },
+      "VeryLongDays_VeryHighMiles_HighReceipts": {
+        "days_category": "VeryLong",
+        "miles_category": "VeryHigh",
+        "receipts_category": "High",
+        "effect": 53.85153964705883,
+        "count": 68,
+        "description": "Three-way interaction: VeryLongDays_VeryHighMiles_HighReceipts"
+      },
+      "VeryLongDays_VeryHighMiles_VeryHighReceipts": {
+        "days_category": "VeryLong",
+        "miles_category": "VeryHigh",
+        "receipts_category": "VeryHigh",
+        "effect": -92.95323589473682,
+        "count": 38,
+        "description": "Three-way interaction: VeryLongDays_VeryHighMiles_VeryHighReceipts"
+      }
+    },
+    "efficiency_spending_interactions": {
+      "LowEfficiency_ModerateSpending": {
+        "efficiency_category": "Low",
+        "spending_category": "Moderate",
+        "effect": 34.57060864169787,
+        "count": 801,
+        "description": "Efficiency-spending interaction: LowEfficiency_ModerateSpending"
+      },
+      "LowEfficiency_HighSpending": {
+        "efficiency_category": "Low",
+        "spending_category": "High",
+        "effect": 55.611025678929764,
+        "count": 299,
+        "description": "Efficiency-spending interaction: LowEfficiency_HighSpending"
+      },
+      "LowEfficiency_LuxurySpending": {
+        "efficiency_category": "Low",
+        "spending_category": "Luxury",
+        "effect": 118.24134380094787,
+        "count": 211,
+        "description": "Efficiency-spending interaction: LowEfficiency_LuxurySpending"
+      },
+      "MediumEfficiency_FrugalSpending": {
+        "efficiency_category": "Medium",
+        "spending_category": "Frugal",
+        "effect": -68.39538173831775,
+        "count": 428,
+        "description": "Efficiency-spending interaction: MediumEfficiency_FrugalSpending"
+      },
+      "MediumEfficiency_ModerateSpending": {
+        "efficiency_category": "Medium",
+        "spending_category": "Moderate",
+        "effect": 77.01672273126144,
+        "count": 547,
+        "description": "Efficiency-spending interaction: MediumEfficiency_ModerateSpending"
+      },
+      "MediumEfficiency_HighSpending": {
+        "efficiency_category": "Medium",
+        "spending_category": "High",
+        "effect": -41.17373837735848,
+        "count": 265,
+        "description": "Efficiency-spending interaction: MediumEfficiency_HighSpending"
+      },
+      "MediumEfficiency_LuxurySpending": {
+        "efficiency_category": "Medium",
+        "spending_category": "Luxury",
+        "effect": -40.646429931330466,
+        "count": 233,
+        "description": "Efficiency-spending interaction: MediumEfficiency_LuxurySpending"
+      },
+      "HighEfficiency_FrugalSpending": {
+        "efficiency_category": "High",
+        "spending_category": "Frugal",
+        "effect": -198.3517263516483,
+        "count": 91,
+        "description": "Efficiency-spending interaction: HighEfficiency_FrugalSpending"
+      },
+      "HighEfficiency_ModerateSpending": {
+        "efficiency_category": "High",
+        "spending_category": "Moderate",
+        "effect": 51.08949189247315,
+        "count": 93,
+        "description": "Efficiency-spending interaction: HighEfficiency_ModerateSpending"
+      },
+      "HighEfficiency_HighSpending": {
+        "efficiency_category": "High",
+        "spending_category": "High",
+        "effect": 46.16669619354838,
+        "count": 93,
+        "description": "Efficiency-spending interaction: HighEfficiency_HighSpending"
+      },
+      "HighEfficiency_LuxurySpending": {
+        "efficiency_category": "High",
+        "spending_category": "Luxury",
+        "effect": -84.76505854474709,
+        "count": 257,
+        "description": "Efficiency-spending interaction: HighEfficiency_LuxurySpending"
+      },
+      "VeryHighEfficiency_FrugalSpending": {
+        "efficiency_category": "VeryHigh",
+        "spending_category": "Frugal",
+        "effect": -110.277078,
+        "count": 60,
+        "description": "Efficiency-spending interaction: VeryHighEfficiency_FrugalSpending"
+      },
+      "VeryHighEfficiency_ModerateSpending": {
+        "efficiency_category": "VeryHigh",
+        "spending_category": "Moderate",
+        "effect": -120.409828,
+        "count": 80,
+        "description": "Efficiency-spending interaction: VeryHighEfficiency_ModerateSpending"
+      }
+    }
+  },
+  "conditional_rules": {
+    "short_trip_spending": {
+      "condition": "trip_duration_days <= 3",
+      "nested_rules": {
+        "low_spending": {
+          "threshold": 100,
+          "effect": -28.07120218579235
+        },
+        "high_spending": {
+          "threshold": 200,
+          "effect": 28.413068965517244
+        }
+      },
+      "description": "Short trips have different spending tolerance"
+    },
+    "high_receipt_mileage": {
+      "condition": "total_receipts_amount >= 1500",
+      "nested_rules": {
+        "short_miles": {
+          "threshold": 300,
+          "effect": 78.07047263681592
+        },
+        "long_miles": {
+          "threshold": 800,
+          "effect": -83.76145135566189
+        }
+      },
+      "description": "High receipt trips have mileage expectations"
+    }
+  },
+  "complex_rules": {
+    "edge_case_refinements": {
+      "one_day_high_miles": {
+        "condition": "trip_duration_days == 1 AND miles_traveled >= 200",
+        "effect": -30.867119741100318,
+        "count": 309,
+        "description": "One-day business blitz pattern"
+      },
+      "one_day_low_miles": {
+        "condition": "trip_duration_days == 1 AND miles_traveled < 50",
+        "effect": 142.3907142857143,
+        "count": 14,
+        "description": "One-day local meeting pattern"
+      },
+      "ultra_long_trips": {
+        "condition": "trip_duration_days >= 12",
+        "effect": 26.236025369978858,
+        "count": 946,
+        "description": "Ultra-long trip adjustment"
+      },
+      "ultra_low_efficiency": {
+        "condition": "miles_per_day < 20",
+        "effect": 112.56147663551401,
+        "count": 535,
+        "description": "Ultra-low efficiency penalty"
+      },
+      "ultra_high_efficiency": {
+        "condition": "miles_per_day >= 400",
+        "effect": -30.55297994269341,
+        "count": 349,
+        "description": "Ultra-high efficiency bonus"
+      }
+    }
+  },
+  "discovery_summary": {
+    "total_tier_systems": 3,
+    "total_interaction_types": 2,
+    "total_conditional_rules": 2,
+    "total_edge_cases": 5,
+    "complexity_level": "High - sophisticated multi-factor business logic"
+  }
+}

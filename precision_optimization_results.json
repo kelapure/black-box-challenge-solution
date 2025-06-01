@@ -1,0 +1,13 @@
+{
+  "optimized_parameters": {
+    "linear_coefficients": {
+      "intercept": 318.4,
+      "trip_duration_days": 71.28,
+      "miles_traveled": 0.7941,
+      "total_receipts_amount": 0.2903661963472635,
+      "improvement": 4.380832731243345e-06
+    },
+    "thresholds": {
+      "receipt_ceiling": {
+        "original": 2193,
+        "optimized": 

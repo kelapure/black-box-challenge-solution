@@ -1,0 +1,735 @@
+{
+  "missing_rules": {
+    "ratio_based_rules": {
+      "spending_$150-200": {
+        "threshold": 200,
+        "effect": 58.213852691218136,
+        "count": 706,
+        "std": 213.43200812589814
+      },
+      "spending_$200-250": {
+        "threshold": 250,
+        "effect": 88.99993227990971,
+        "count": 443,
+        "std": 178.0246624857433
+      },
+      "spending_$250-300": {
+        "threshold": 300,
+        "effect": 80.01437086092713,
+        "count": 302,
+        "std": 188.27383468769148
+      },
+      "efficiency_0.3-0.5mi/$": {
+        "threshold": 0.5,
+        "effect": 26.888929292929294,
+        "count": 990
+      },
+      "efficiency_0.5-1.0mi/$": {
+        "threshold": 1.0,
+        "effect": 78.81694296577946,
+        "count": 1315
+      },
+      "efficiency_1.0-2.0mi/$": {
+        "threshold": 2.0,
+        "effect": 132.16110223642173,
+        "count": 626
+      },
+      "efficiency_2.0-5.0mi/$": {
+        "threshold": 5.0,
+        "effect": 67.37696428571428,
+        "count": 392
+      },
+      "intensity_500-1000": {
+        "threshold": 1000,
+        "effect": 36.44868921775899,
+        "count": 473
+      },
+      "intensity_1000-2000": {
+        "threshold": 2000,
+        "effect": 45.134778523489935,
+        "count": 745
+      },
+      "intensity_2000-5000": {
+        "threshold": 5000,
+        "effect": 46.14680453635757,
+        "count": 1499
+      },
+      "intensity_5000-10000": {
+        "threshold": 10000,
+        "effect": 70.78541601255887,
+        "count": 1274
+      }
+    },
+    "sequential_patterns": {
+      "early_trips": {
+        "effect": 48.03381999999999,
+        "count": 1000,
+        "description": "Dataset position effect: early_trips"
+      },
+      "mid_early_trips": {
+        "effect": 44.26418,
+        "count": 1000,
+        "description": "Dataset position effect: mid_early_trips"
+      },
+      "middle_trips": {
+        "effect": 47.1345,
+        "count": 1000,
+        "description": "Dataset position effect: middle_trips"
+      },
+      "mid_late_trips": {
+        "effect": 63.046929999999996,
+        "count": 1000,
+        "description": "Dataset position effect: mid_late_trips"
+      },
+      "late_trips": {
+        "effect": 46.96196,
+        "count": 1000,
+        "description": "Dataset position effect: late_trips"
+      },
+      "modulo_3_remainder_0": {
+        "modulo": 3,
+        "remainder": 0,
+        "effect": 57.385716856628676,
+        "count": 1667,
+        "description": "Every 3 trips, position 0"
+      },
+      "modulo_3_remainder_1": {
+        "modulo": 3,
+        "remainder": 1,
+        "effect": 43.32392321535693,
+        "count": 1667,
+        "description": "Every 3 trips, position 1"
+      },
+      "modulo_3_remainder_2": {
+        "modulo": 3,
+        "remainder": 2,
+        "effect": 48.954633853541424,
+        "count": 1666,
+        "description": "Every 3 trips, position 2"
+      },
+      "modulo_4_remainder_0": {
+        "modulo": 4,
+        "remainder": 0,
+        "effect": 54.978064,
+        "count": 1250,
+        "description": "Every 4 trips, position 0"
+      },
+      "modulo_4_remainder_1": {
+        "modulo": 4,
+        "remainder": 1,
+        "effect": 47.01432799999999,
+        "count": 1250,
+        "description": "Every 4 trips, position 1"
+      },
+      "modulo_4_remainder_2": {
+        "modulo": 4,
+        "remainder": 2,
+        "effect": 51.154616000000004,
+        "count": 1250,
+        "description": "Every 4 trips, position 2"
+      },
+      "modulo_4_remainder_3": {
+        "modulo": 4,
+        "remainder": 3,
+        "effect": 46.406104,
+        "count": 1250,
+        "description": "Every 4 trips, position 3"
+      },
+      "modulo_5_remainder_0": {
+        "modulo": 5,
+        "remainder": 0,
+        "effect": 53.919779999999996,
+        "count": 1000,
+        "description": "Every 5 trips, position 0"
+      },
+      "modulo_5_remainder_1": {
+        "modulo": 5,
+        "remainder": 1,
+        "effect": 47.499089999999995,
+        "count": 1000,
+        "description": "Every 5 trips, position 1"
+      },
+      "modulo_5_remainder_2": {
+        "modulo": 5,
+        "remainder": 2,
+        "effect": 53.96847,
+        "count": 1000,
+        "description": "Every 5 trips, position 2"
+      },
+      "modulo_5_remainder_3": {
+        "modulo": 5,
+        "remainder": 3,
+        "effect": 52.697340000000004,
+        "count": 1000,
+        "description": "Every 5 trips, position 3"
+      },
+      "modulo_5_remainder_4": {
+        "modulo": 5,
+        "remainder": 4,
+        "effect": 41.35671000000001,
+        "count": 1000,
+        "description": "Every 5 trips, position 4"
+      },
+      "modulo_7_remainder_0": {
+        "modulo": 7,
+        "remainder": 0,
+        "effect": 62.47427972027972,
+        "count": 715,
+        "description": "Every 7 trips, position 0"
+      },
+      "modulo_7_remainder_1": {
+        "modulo": 7,
+        "remainder": 1,
+        "effect": 34.24386013986014,
+        "count": 715,
+        "description": "Every 7 trips, position 1"
+      },
+      "modulo_7_remainder_2": {
+        "modulo": 7,
+        "remainder": 2,
+        "effect": 32.52610644257704,
+        "count": 714,
+        "description": "Every 7 trips, position 2"
+      },
+      "modulo_7_remainder_3": {
+        "modulo": 7,
+        "remainder": 3,
+        "effect": 56.429971988795515,
+        "count": 714,
+        "description": "Every 7 trips, position 3"
+      },
+      "modulo_7_remainder_4": {
+        "modulo": 7,
+        "remainder": 4,
+        "effect": 48.71254901960785,
+        "count": 714,
+        "description": "Every 7 trips, position 4"
+      },
+      "modulo_7_remainder_5": {
+        "modulo": 7,
+        "remainder": 5,
+        "effect": 56.91301120448179,
+        "count": 714,
+        "description": "Every 7 trips, position 5"
+      },
+      "modulo_7_remainder_6": {
+        "modulo": 7,
+        "remainder": 6,
+        "effect": 57.92245098039216,
+        "count": 714,
+        "description": "Every 7 trips, position 6"
+      },
+      "modulo_10_remainder_0": {
+        "modulo": 10,
+        "remainder": 0,
+        "effect": 52.79406,
+        "count": 500,
+        "description": "Every 10 trips, position 0"
+      },
+      "modulo_10_remainder_1": {
+        "modulo": 10,
+        "remainder": 1,
+        "effect": 39.99576,
+        "count": 500,
+        "description": "Every 10 trips, position 1"
+      },
+      "modulo_10_remainder_2": {
+        "modulo": 10,
+        "remainder": 2,
+        "effect": 57.169740000000004,
+        "count": 500,
+        "description": "Every 10 trips, position 2"
+      },
+      "modulo_10_remainder_3": {
+        "modulo": 10,
+        "remainder": 3,
+        "effect": 48.321740000000005,
+        "count": 500,
+        "description": "Every 10 trips, position 3"
+      },
+      "modulo_10_remainder_4": {
+        "modulo": 10,
+        "remainder": 4,
+        "effect": 43.29254000000001,
+        "count": 500,
+        "description": "Every 10 trips, position 4"
+      },
+      "modulo_10_remainder_5": {
+        "modulo": 10,
+        "remainder": 5,
+        "effect": 55.0455,
+        "count": 500,
+        "description": "Every 10 trips, position 5"
+      },
+      "modulo_10_remainder_6": {
+        "modulo": 10,
+        "remainder": 6,
+        "effect": 55.00242,
+        "count": 500,
+        "description": "Every 10 trips, position 6"
+      },
+      "modulo_10_remainder_7": {
+        "modulo": 10,
+        "remainder": 7,
+        "effect": 50.76719999999999,
+        "count": 500,
+        "description": "Every 10 trips, position 7"
+      },
+      "modulo_10_remainder_8": {
+        "modulo": 10,
+        "remainder": 8,
+        "effect": 57.072939999999996,
+        "count": 500,
+        "description": "Every 10 trips, position 8"
+      },
+      "modulo_10_remainder_9": {
+        "modulo": 10,
+        "remainder": 9,
+        "effect": 39.42088,
+        "count": 500,
+        "description": "Every 10 trips, position 9"
+      }
+    },
+    "cumulative_effects": {
+      "round_days": {
+        "round_effect": 88.14118987341773,
+        "non_round_effect": 42.7101781472684,
+        "difference": 45.43101172614933,
+        "round_count": 790,
+        "non_round_count": 4210
+      },
+      "round_miles_50s": {
+        "round_effect": 69.67225490196078,
+        "non_round_effect": 49.47628011433238,
+        "difference": 20.1959747876284,
+        "round_count": 102,
+        "non_round_count": 4898
+      }
+    },
+    "geographic_clustering": {
+      "distance_cluster_200": {
+        "distance": 200,
+        "effect": -33.3439855072464,
+        "count": 138,
+        "std": 200.53723981134544
+      },
+      "distance_cluster_100": {
+        "distance": 100,
+        "effect": -36.37933884297521,
+        "count": 121,
+        "std": 159.47461635913274
+      },
+      "distance_cluster_75": {
+        "distance": 75,
+        "effect": -45.49568807339449,
+        "count": 109,
+        "std": 163.4774922290356
+      },
+      "distance_cluster_150": {
+        "distance": 150,
+        "effect": -37.95146788990825,
+        "count": 109,
+        "std": 129.43223339751887
+      },
+      "distance_cluster_25": {
+        "distance": 25,
+        "effect": -63.76846153846156,
+        "count": 78,
+        "std": 164.5513737019925
+      },
+      "distance_cluster_0": {
+        "distance": 0,
+        "effect": -55.3504,
+        "count": 25,
+        "std": 82.93442627964177
+      },
+      "distance_cluster_725": {
+        "distance": 725,
+        "effect": 117.79257142857143,
+        "count": 105,
+        "std": 148.63305229547814
+      },
+      "distance_cluster_225": {
+        "distance": 225,
+        "effect": -28.30534653465346,
+        "count": 101,
+        "std": 220.4886369297264
+      },
+      "distance_cluster_675": {
+        "distance": 675,
+        "effect": 98.32989361702126,
+        "count": 94,
+        "std": 195.52690346192242
+      },
+      "distance_cluster_700": {
+        "distance": 700,
+        "effect": 88.51623762376236,
+        "count": 101,
+        "std": 224.85991383015107
+      },
+      "distance_cluster_450": {
+        "distance": 450,
+        "effect": -31.12343434343436,
+        "count": 99,
+        "std": 224.57646583391656
+      },
+      "distance_cluster_625": {
+        "distance": 625,
+        "effect": 67.73981651376147,
+        "count": 109,
+        "std": 251.14229169116848
+      },
+      "distance_cluster_750": {
+        "distance": 750,
+        "effect": 88.78194690265485,
+        "count": 113,
+        "std": 158.18333947996192
+      },
+      "distance_cluster_775": {
+        "distance": 775,
+        "effect": 122.01512605042015,
+        "count": 119,
+        "std": 198.1877050004148
+      },
+      "distance_cluster_575": {
+        "distance": 575,
+        "effect": 69.11036036036037,
+        "count": 111,
+        "std": 140.08853024185632
+      },
+      "distance_cluster_825": {
+        "distance": 825,
+        "effect": 115.62475806451612,
+        "count": 124,
+        "std": 176.39972143141043
+      },
+      "distance_cluster_800": {
+        "distance": 800,
+        "effect": 62.671875,
+        "count": 96,
+        "std": 228.89382679272018
+      },
+      "distance_cluster_600": {
+        "distance": 600,
+        "effect": 92.20229508196722,
+        "count": 122,
+        "std": 133.55550431142532
+      },
+      "distance_cluster_650": {
+        "distance": 650,
+        "effect": 105.51696078431372,
+        "count": 102,
+        "std": 223.26718628775242
+      },
+      "distance_cluster_850": {
+        "distance": 850,
+        "effect": 125.76551020408164,
+        "count": 98,
+        "std": 200.26520158330283
+      },
+      "distance_cluster_550": {
+        "distance": 550,
+        "effect": 34.69233333333332,
+        "count": 120,
+        "std": 204.14042728801502
+      },
+      "distance_cluster_975": {
+        "distance": 975,
+        "effect": 127.5856779661017,
+        "count": 118,
+        "std": 168.73909606546263
+      },
+      "distance_cluster_900": {
+        "distance": 900,
+        "effect": 115.46677083333333,
+        "count": 96,
+        "std": 174.0580513597315
+      },
+      "distance_cluster_1050": {
+        "distance": 1050,
+        "effect": 130.3771287128713,
+        "count": 101,
+        "std": 207.21629132062293
+      },
+      "distance_cluster_1000": {
+        "distance": 1000,
+        "effect": 109.92799999999998,
+        "count": 105,
+        "std": 192.62194350093378
+      },
+      "distance_cluster_875": {
+        "distance": 875,
+        "effect": 105.48226086956522,
+        "count": 115,
+        "std": 212.7160742615132
+      },
+      "distance_cluster_1025": {
+        "distance": 1025,
+        "effect": 136.14194444444442,
+        "count": 108,
+        "std": 212.34823559364747
+      },
+      "distance_cluster_925": {
+        "distance": 925,
+        "effect": 110.30149999999999,
+        "count": 100,
+        "std": 149.58470827679054
+      },
+      "distance_cluster_950": {
+        "distance": 950,
+        "effect": 102.72893617021278,
+        "count": 94,
+        "std": 187.04410904353114
+      },
+      "distance_cluster_1100": {
+        "distance": 1100,
+        "effect": 128.07361111111115,
+        "count": 108,
+        "std": 158.36300790236567
+      },
+      "distance_cluster_1075": {
+        "distance": 1075,
+        "effect": 98.53161290322578,
+        "count": 93,
+        "std": 218.37248800621023
+      },
+      "distance_cluster_1150": {
+        "distance": 1150,
+        "effect": 141.58208791208793,
+        "count": 91,
+        "std": 221.85073420616482
+      },
+      "distance_cluster_1200": {
+        "distance": 1200,
+        "effect": 164.4440789473684,
+        "count": 76,
+        "std": 201.7977181646851
+      },
+      "distance_cluster_1175": {
+        "distance": 1175,
+        "effect": 116.932875,
+        "count": 80,
+        "std": 194.60663648117404
+      },
+      "distance_cluster_1125": {
+        "distance": 1125,
+        "effect": 85.16619047619047,
+        "count": 84,
+        "std": 248.763618513954
+      },
+      "3.0day_short": {
+        "effect": -40.87227272727272,
+        "count": 110,
+        "description": "Route pattern: 3.0day_short"
+      },
+      "1.0day_short": {
+        "effect": 25.944000000000006,
+        "count": 105,
+        "description": "Route pattern: 1.0day_short"
+      },
+      "2.0day_short": {
+        "effect": -38.80418181818182,
+        "count": 110,
+        "description": "Route pattern: 2.0day_short"
+      },
+      "5.0day_short": {
+        "effect": 88.51035211267605,
+        "count": 142,
+        "description": "Route pattern: 5.0day_short"
+      },
+      "5.0day_medium": {
+        "effect": 148.14011764705882,
+        "count": 170,
+        "description": "Route pattern: 5.0day_medium"
+      },
+      "5.0day_long": {
+        "effect": 191.60549019607842,
+        "count": 153,
+        "description": "Route pattern: 5.0day_long"
+      },
+      "12.0day_medium": {
+        "effect": -73.03807017543862,
+        "count": 114,
+        "description": "Route pattern: 12.0day_medium"
+      },
+      "9.0day_short": {
+        "effect": -88.94125,
+        "count": 80,
+        "description": "Route pattern: 9.0day_short"
+      },
+      "9.0day_long": {
+        "effect": 117.10100591715977,
+        "count": 169,
+        "description": "Route pattern: 9.0day_long"
+      },
+      "11.0day_medium": {
+        "effect": -50.36586956521741,
+        "count": 92,
+        "description": "Route pattern: 11.0day_medium"
+      },
+      "11.0day_short": {
+        "effect": -100.29802631578949,
+        "count": 76,
+        "description": "Route pattern: 11.0day_short"
+      },
+      "10.0day_medium": {
+        "effect": -27.655964912280705,
+        "count": 114,
+        "description": "Route pattern: 10.0day_medium"
+      },
+      "11.0day_long": {
+        "effect": 66.27878787878788,
+        "count": 132,
+        "description": "Route pattern: 11.0day_long"
+      },
+      "12.0day_long": {
+        "effect": 35.114841269841264,
+        "count": 126,
+        "description": "Route pattern: 12.0day_long"
+      },
+      "10.0day_short": {
+        "effect": -63.54363636363637,
+        "count": 88,
+        "description": "Route pattern: 10.0day_short"
+      },
+      "8.0day_medium": {
+        "effect": -39.690319999999986,
+        "count": 125,
+        "description": "Route pattern: 8.0day_medium"
+      },
+      "10.0day_long": {
+        "effect": 91.93682926829268,
+        "count": 123,
+        "description": "Route pattern: 10.0day_long"
+      },
+      "9.0day_medium": {
+        "effect": -49.19465648854962,
+        "count": 131,
+        "description": "Route pattern: 9.0day_medium"
+      },
+      "8.0day_short": {
+        "effect": -84.3894936708861,
+        "count": 79,
+        "description": "Route pattern: 8.0day_short"
+      },
+      "8.0day_long": {
+        "effect": 162.4839247311828,
+        "count": 186,
+        "description": "Route pattern: 8.0day_long"
+      },
+      "12.0day_short": {
+        "effect": -62.96961038961039,
+        "count": 77,
+        "description": "Route pattern: 12.0day_short"
+      },
+      "1.0day_long": {
+        "effect": 82.42335766423359,
+        "count": 137,
+        "description": "Route pattern: 1.0day_long"
+      },
+      "3.0day_medium": {
+        "effect": 106.26370689655172,
+        "count": 116,
+        "description": "Route pattern: 3.0day_medium"
+      },
+      "3.0day_long": {
+        "effect": 73.26584699453551,
+        "count": 183,
+        "description": "Route pattern: 3.0day_long"
+      },
+      "6.0day_long": {
+        "effect": 244.2294674556213,
+        "count": 169,
+        "description": "Route pattern: 6.0day_long"
+      },
+      "7.0day_long": {
+        "effect": 149.98163636363634,
+        "count": 165,
+        "description": "Route pattern: 7.0day_long"
+      },
+      "6.0day_medium": {
+        "effect": 150.9526126126126,
+        "count": 111,
+        "description": "Route pattern: 6.0day_medium"
+      },
+      "2.0day_long": {
+        "effect": 97.54700680272109,
+        "count": 147,
+        "description": "Route pattern: 2.0day_long"
+      },
+      "4.0day_medium": {
+        "effect": 111.1787387387387,
+        "count": 111,
+        "description": "Route pattern: 4.0day_medium"
+      },
+      "2.0day_medium": {
+        "effect": 126.84228813559322,
+        "count": 118,
+        "description": "Route pattern: 2.0day_medium"
+      },
+      "4.0day_long": {
+        "effect": 118.61806451612904,
+        "count": 124,
+        "description": "Route pattern: 4.0day_long"
+      },
+      "1.0day_medium": {
+        "effect": 80.76035460992907,
+        "count": 141,
+        "description": "Route pattern: 1.0day_medium"
+      },
+      "7.0day_short": {
+        "effect": -100.34929292929293,
+        "count": 99,
+        "description": "Route pattern: 7.0day_short"
+      },
+      "6.0day_short": {
+        "effect": 99.87142857142855,
+        "count": 70,
+        "description": "Route pattern: 6.0day_short"
+      },
+      "14.0day_long": {
+        "effect": 68.40361538461538,
+        "count": 130,
+        "description": "Route pattern: 14.0day_long"
+      },
+      "13.0day_long": {
+        "effect": 27.32905797101448,
+        "count": 138,
+        "description": "Route pattern: 13.0day_long"
+      },
+      "13.0day_short": {
+        "effect": -86.89593406593406,
+        "count": 91,
+        "description": "Route pattern: 13.0day_short"
+      },
+      "13.0day_medium": {
+        "effect": -47.00247706422019,
+        "count": 109,
+        "description": "Route pattern: 13.0day_medium"
+      },
+      "14.0day_medium": {
+        "effect": -66.60285714285713,
+        "count": 98,
+        "description": "Route pattern: 14.0day_medium"
+      },
+      "14.0day_short": {
+        "effect": -59.336349206349205,
+        "count": 63,
+        "description": "Route pattern: 14.0day_short"
+      }
+    },
+    "mathematical_relationships": {
+      "miles_squared_per_day": {
+        "coefficient": 0.00017455331096462258,
+        "improvement": 0.009170849541939918,
+        "correlation": 0.15852300185321438,
+        "description": "Advanced ratio: miles_squared_per_day"
+      }
+    }
+  },
+  "discovery_summary": {
+    "total_rule_categories": 5,
+    "total_rules_found": 123,
+    "approach": "Simple, interpretable business logic patterns"
+  }
+}

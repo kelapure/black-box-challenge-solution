@@ -1,0 +1,209 @@
+{
+  "linear_baseline": {
+    "intercept": 318.4,
+    "trip_duration_days": 71.28,
+    "miles_traveled": 0.7941,
+    "total_receipts_amount": 0.2904
+  },
+  "business_rules": {
+    "sweet_spot_bonus": {
+      "description": "5-6 day trips get sweet spot bonus (Peggy's rule)",
+      "priority": 1,
+      "conditions": {
+        "trip_duration_days": [
+          5,
+          6
+        ]
+      },
+      "adjustment": 78.85,
+      "rule_type": "bonus",
+      "source": "Peggy interview"
+    },
+    "receipt_ceiling": {
+      "description": "High receipts (>$2193) get ceiling penalty (Peggy's rule)",
+      "priority": 2,
+      "conditions": {
+        "total_receipts_amount": {
+          "operator": ">",
+          "value": 2193
+        }
+      },
+      "adjustment": -99.48,
+      "rule_type": "penalty",
+      "source": "Peggy interview"
+    },
+    "big_trip_jackpot": {
+      "description": "Big trips (8+ days, 900+ miles, $1200+ receipts) get jackpot bonus (Sarah's rule)",
+      "priority": 3,
+      "conditions": {
+        "trip_duration_days": {
+          "operator": ">=",
+          "value": 8
+        },
+        "miles_traveled": {
+          "operator": ">=",
+          "value": 900
+        },
+        "total_receipts_amount": {
+          "operator": ">=",
+          "value": 1200
+        }
+      },
+      "adjustment": 46.67,
+      "rule_type": "bonus",
+      "source": "Sarah interview"
+    },
+    "distance_bonus": {
+      "description": "Long distance trips (600+ miles) get logistical bonus (Tom's rule)",
+      "priority": 4,
+      "conditions": {
+        "miles_traveled": {
+          "operator": ">=",
+          "value": 600
+        }
+      },
+      "adjustment": 28.75,
+      "rule_type": "bonus",
+      "source": "Tom interview"
+    },
+    "minimum_spending_penalty": {
+      "description": "Very low spending (<$103) gets minimum threshold penalty",
+      "priority": 5,
+      "conditions": {
+        "total_receipts_amount": {
+          "operator": "<",
+          "value": 103
+        }
+      },
+      "adjustment": -299.03,
+      "rule_type": "penalty",
+      "source": "Edge case analysis"
+    },
+    "efficiency_moderate_bonus": {
+      "description": "Moderate efficiency (100-200 miles/day) gets road warrior bonus",
+      "priority": 6,
+      "conditions": {
+        "miles_per_day": {
+          "operator": ">=",
+          "value": 100
+        },
+        "miles_per_day_max": {
+          "operator": "<",
+          "value": 200
+        }
+      },
+      "adjustment": 47.59,
+      "rule_type": "bonus",
+      "source": "John interview + edge case analysis"
+    },
+    "efficiency_high_bonus": {
+      "description": "High efficiency (200-300 miles/day) gets road warrior bonus",
+      "priority": 7,
+      "conditions": {
+        "miles_per_day": {
+          "operator": ">=",
+          "value": 200
+        },
+        "miles_per_day_max": {
+          "operator": "<",
+          "value": 300
+        }
+      },
+      "adjustment": 33.17,
+      "rule_type": "bonus",
+      "source": "John interview + edge case analysis"
+    },
+    "efficiency_low_penalty": {
+      "description": "Low efficiency (0-100 miles/day) gets efficiency penalty",
+      "priority": 8,
+      "conditions": {
+        "miles_per_day": {
+          "operator": "<",
+          "value": 100
+        }
+      },
+      "adjustment": -23.66,
+      "rule_type": "penalty",
+      "source": "Edge case analysis"
+    },
+    "long_trip_high_spending_penalty": {
+      "description": "Long trips (7+ days) with high spending rate get judgment penalty",
+      "priority": 9,
+      "conditions": {
+        "trip_duration_days": {
+          "operator": ">=",
+          "value": 7
+        },
+        "receipts_per_day": {
+          "operator": ">",
+          "value": 178
+        }
+      },
+      "adjustment": -89.41,
+      "rule_type": "penalty",
+      "source": "Tom interview + edge case analysis"
+    },
+    "quarter_rounding": {
+      "description": "Final result rounded to nearest quarter (system artifact)",
+      "priority": 10,
+      "rule_type": "rounding",
+      "source": "Edge case analysis"
+    }
+  },
+  "rule_precedence": [
+    "sweet_spot_bonus",
+    "receipt_ceiling",
+    "big_trip_jackpot",
+    "distance_bonus",
+    "minimum_spending_penalty",
+    "efficiency_moderate_bonus",
+    "efficiency_high_bonus",
+    "efficiency_low_penalty",
+    "long_trip_high_spending_penalty",
+    "quarter_rounding"
+  ],
+  "performance_metrics": {
+    "linear_baseline": {
+      "r2": 0.8018553936769212,
+      "rmse": 232.9163004448246,
+      "mae": 176.8426334459004
+    },
+    "final_model": {
+      "r2": 0.8352643825415258,
+      "rmse": 212.37456869262854,
+      "mae": 154.841526
+    },
+    "improvements": {
+      "r2_improvement": 0.03340898886460464,
+      "rmse_improvement": 20.541731752196057,
+      "mae_improvement": 22.001107445900402
+    },
+    "accuracy_analysis": {
+      "exact_matches": 0,
+      "exact_match_rate": 0.0,
+      "within_1_dollar": 20,
+      "within_1_dollar_rate": 0.4,
+      "within_5_dollars": 111,
+      "within_5_dollars_rate": 2.22,
+      "within_10_dollars": 219,
+      "within_10_dollars_rate": 4.38
+    },
+    "residual_statistics": {
+      "mean": 11.220077999999999,
+      "std": 212.09918550044438,
+      "min": -1268.05,
+      "max": 896.0300000000002
+    }
+  },
+  "system_summary": {
+    "total_rules": 10,
+    "rule_types": [
+      "rounding",
+      "bonus",
+      "penalty"
+    ],
+    "final_r2": 0.8352643825415258,
+    "final_rmse": 212.37456869262854,
+    "improvement_from_baseline": 0.03340898886460464
+  }
+}

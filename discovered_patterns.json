@@ -1,0 +1,47 @@
+{
+  "correlations": {
+    "reimbursement": 1.0,
+    "miles_traveled": 0.5790230349701951,
+    "trip_duration_days": 0.5777010459047109,
+    "total_receipts_amount": 0.4690719514897147,
+    "receipts_per_mile": -0.042740198441435825,
+    "receipts_per_day": -0.09366347799720916,
+    "miles_per_day": -0.10999086674037221
+  },
+  "per_diem": {
+    "daily_rate_coefficient": 76.32310423828062,
+    "base_amount": 1103.9413199013327,
+    "r2_score": 0.33373849843939674
+  },
+  "mileage": {
+    "best_breakpoint": 100,
+    "best_r2": 0.33760407004847026
+  },
+  "receipts": {
+    "linear_r2": 0.22002849567436944,
+    "quadratic_r2": 0.3576924753744428,
+    "ceiling_threshold": 2193.318
+  },
+  "efficiency": {
+    "miles_per_day_correlation": -0.10999086674037242
+  },
+  "sweet_spot": {
+    "bonus_percentage": -5.198890421410223,
+    "sweet_spot_avg": 1580.610674846626,
+    "other_avg": 1667.2913237753883
+  },
+  "big_trip_jackpot": {
+    "bonus_percentage": 54.40711419849643,
+    "qualifying_trips": 330,
+    "jackpot_avg": 2464.117090909091
+  },
+  "multi_linear": {
+    "r2": 0.8022202925848898,
+    "coefficients": {
+      "trip_duration_days": 70.355357854529,
+      "miles_traveled": 0.8175964762091336,
+      "total_receipts_amount": 0.28804255134478496
+    },
+    "intercept": 318.3952155979507
+  }
+}

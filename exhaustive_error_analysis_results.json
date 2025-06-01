@@ -1,0 +1,277 @@
+{
+  "final_rules": {
+    "large_residual_patterns": {
+      "large_residual_long_high_high": {
+        "pattern": "long_high_high",
+        "count": 6,
+        "avg_residual": -1022.9716666666667,
+        "description": "Large residual pattern: long_high_high"
+      },
+      "large_residual_long_med_high": {
+        "pattern": "long_med_high",
+        "count": 6,
+        "avg_residual": -1097.335,
+        "description": "Large residual pattern: long_med_high"
+      },
+      "large_residual_short_high_high": {
+        "pattern": "short_high_high",
+        "count": 3,
+        "avg_residual": -990.7566666666668,
+        "description": "Large residual pattern: short_high_high"
+      },
+      "large_residual_long_med_med": {
+        "pattern": "long_med_med",
+        "count": 9,
+        "avg_residual": -912.2188888888888,
+        "description": "Large residual pattern: long_med_med"
+      },
+      "large_residual_long_high_med": {
+        "pattern": "long_high_med",
+        "count": 9,
+        "avg_residual": 267.74444444444447,
+        "description": "Large residual pattern: long_high_med"
+      },
+      "large_residual_medium_high_med": {
+        "pattern": "medium_high_med",
+        "count": 3,
+        "avg_residual": 810.8566666666666,
+        "description": "Large residual pattern: medium_high_med"
+      },
+      "problematic_days_2": {
+        "days": 2,
+        "count": 189,
+        "avg_residual": 139.8609523809524,
+        "effect": 69.9304761904762
+      },
+      "problematic_days_3": {
+        "days": 3,
+        "count": 217,
+        "avg_residual": 89.66294930875576,
+        "effect": 44.83147465437788
+      },
+      "problematic_days_4": {
+        "days": 4,
+        "count": 141,
+        "avg_residual": 97.73638297872338,
+        "effect": 48.86819148936169
+      },
+      "problematic_days_5": {
+        "days": 5,
+        "count": 314,
+        "avg_residual": 191.290923566879,
+        "effect": 95.6454617834395
+      },
+      "problematic_days_6": {
+        "days": 6,
+        "count": 239,
+        "avg_residual": 182.54368200836822,
+        "effect": 91.27184100418411
+      },
+      "problematic_days_7": {
+        "days": 7,
+        "count": 248,
+        "avg_residual": 171.51008064516125,
+        "effect": 85.75504032258063
+      },
+      "problematic_miles_600_800": {
+        "mile_range": [
+          600,
+          800
+        ],
+        "count": 518,
+        "avg_residual": 84.32949806949807,
+        "effect": 25.29884942084942
+      },
+      "problematic_miles_800_1200": {
+        "mile_range": [
+          800,
+          1200
+        ],
+        "count": 1032,
+        "avg_residual": 176.71922480620157,
+        "effect": 53.01576744186047
+      },
+      "problematic_miles_1200_2000": {
+        "mile_range": [
+          1200,
+          2000
+        ],
+        "count": 16,
+        "avg_residual": 196.11374999999998,
+        "effect": 58.83412499999999
+      },
+      "extreme_ratio_ultra_high_daily_spend": {
+        "ratio_type": "ultra_high_daily_spend",
+        "count": 391,
+        "avg_residual": 113.10892583120206,
+        "effect": 45.24357033248083
+      },
+      "extreme_ratio_ultra_low_daily_spend": {
+        "ratio_type": "ultra_low_daily_spend",
+        "count": 250,
+        "avg_residual": -138.49940000000004,
+        "effect": -55.399760000000015
+      },
+      "extreme_ratio_ultra_efficient_miles": {
+        "ratio_type": "ultra_efficient_miles",
+        "count": 191,
+        "avg_residual": -101.2426178010471,
+        "effect": -40.49704712041884
+      },
+      "extreme_ratio_ultra_inefficient_miles": {
+        "ratio_type": "ultra_inefficient_miles",
+        "count": 460,
+        "avg_residual": 83.93741304347826,
+        "effect": 33.5749652173913
+      }
+    },
+    "micro_adjustments": {
+      "days_coefficient_fine_tune": {
+        "old_coefficient": 71.28,
+        "new_coefficient": 74.84400000000001,
+        "improvement": 0.0028514321394181863
+      },
+      "miles_coefficient_fine_tune": {
+        "old_coefficient": 0.7941,
+        "new_coefficient": 0.833805,
+        "improvement": 0.00961776044716156
+      },
+      "receipts_coefficient_fine_tune": {
+        "old_coefficient": 0.290366,
+        "new_coefficient": 0.30488430000000005,
+        "improvement": 0.005131562732997863
+      },
+      "sweet_spot_penalty_fine_tune": {
+        "old_bonus": -34.57,
+        "new_bonus": -27.656000000000002,
+        "improvement": 0.0010720722281849504,
+        "affected_trips": 815
+      },
+      "distance_penalty_fine_tune": {
+        "old_bonus": -41.02,
+        "new_bonus": -32.816,
+        "improvement": 0.002703305180643323,
+        "affected_trips": 2729
+      },
+      "efficiency_medium_penalty_fine_tune": {
+        "old_bonus": -27.84,
+        "new_bonus": -22.272000000000002,
+        "improvement": 0.0013958798574007503,
+        "affected_trips": 1164
+      }
+    },
+    "edge_cases": {
+      "ultra_long_ultra_low_miles": {
+        "count": 13,
+        "avg_residual": 82.9076923076923,
+        "effect": 49.74461538461538,
+        "description": "Edge case: ultra_long_ultra_low_miles"
+      },
+      "zero_or_tiny_miles": {
+        "count": 17,
+        "avg_residual": 58.9835294117647,
+        "effect": 35.390117647058815,
+        "description": "Edge case: zero_or_tiny_miles"
+      },
+      "exact_miles_1041.0": {
+        "value_type": "exact_miles",
+        "value": 1041.0,
+        "count": 13,
+        "avg_residual": 121.63846153846154,
+        "effect": 60.81923076923077
+      },
+      "exact_miles_199.0": {
+        "value_type": "exact_miles",
+        "value": 199.0,
+        "count": 12,
+        "avg_residual": -194.545,
+        "effect": -97.2725
+      },
+      "exact_miles_783.0": {
+        "value_type": "exact_miles",
+        "value": 783.0,
+        "count": 11,
+        "avg_residual": 165.30363636363637,
+        "effect": 82.65181818181819
+      },
+      "exact_miles_975.0": {
+        "value_type": "exact_miles",
+        "value": 975.0,
+        "count": 10,
+        "avg_residual": 183.201,
+        "effect": 91.6005
+      },
+      "exact_miles_849.0": {
+        "value_type": "exact_miles",
+        "value": 849.0,
+        "count": 9,
+        "avg_residual": 96.32444444444447,
+        "effect": 48.16222222222223
+      },
+      "exact_miles_867.0": {
+        "value_type": "exact_miles",
+        "value": 867.0,
+        "count": 9,
+        "avg_residual": 80.08444444444444,
+        "effect": 40.04222222222222
+      },
+      "exact_miles_726.0": {
+        "value_type": "exact_miles",
+        "value": 726.0,
+        "count": 9,
+        "avg_residual": 91.52666666666667,
+        "effect": 45.763333333333335
+      },
+      "exact_miles_948.0": {
+        "value_type": "exact_miles",
+        "value": 948.0,
+        "count": 9,
+        "avg_residual": 269.13000000000005,
+        "effect": 134.56500000000003
+      },
+      "exact_miles_949.0": {
+        "value_type": "exact_miles",
+        "value": 949.0,
+        "count": 9,
+        "avg_residual": 110.20555555555555,
+        "effect": 55.102777777777774
+      },
+      "exact_miles_1138.0": {
+        "value_type": "exact_miles",
+        "value": 1138.0,
+        "count": 8,
+        "avg_residual": 382.76374999999996,
+        "effect": 191.38187499999998
+      },
+      "ultra_cost_efficient": {
+        "count": 651,
+        "avg_residual": -46.28390168970814,
+        "effect": -13.885170506912441,
+        "description": "Ratio edge case: ultra_cost_efficient"
+      },
+      "ultra_cost_inefficient": {
+        "count": 398,
+        "avg_residual": 78.00273869346732,
+        "effect": 23.400821608040197,
+        "description": "Ratio edge case: ultra_cost_inefficient"
+      },
+      "extreme_daily_intensity": {
+        "count": 581,
+        "avg_residual": 38.21734939759036,
+        "effect": 11.465204819277108,
+        "description": "Ratio edge case: extreme_daily_intensity"
+      },
+      "minimal_daily_intensity": {
+        "count": 232,
+        "avg_residual": 31.919612068965513,
+        "effect": 9.575883620689654,
+        "description": "Ratio edge case: minimal_daily_intensity"
+      }
+    }
+  },
+  "analysis_summary": {
+    "total_rule_categories": 3,
+    "total_rules_found": 41,
+    "approach": "Exhaustive error analysis with conservative rule application"
+  }
+}

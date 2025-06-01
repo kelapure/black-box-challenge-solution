@@ -1,0 +1,124 @@
+{
+  "edge_case_rules": {
+    "quarter_rounding": {
+      "description": "Round final result to nearest quarter",
+      "improvement": 0.1898633339868001,
+      "rule_type": "rounding"
+    },
+    "seasonal_variations": {
+      "quarter_0": {
+        "adjustment": -14.966728293585462,
+        "affected_trips": 1250,
+        "description": "Quarter 0 budget adjustment"
+      },
+      "quarter_3": {
+        "adjustment": 10.888448686868614,
+        "affected_trips": 1250,
+        "description": "Quarter 3 budget adjustment"
+      }
+    },
+    "minimum_spending_penalty": {
+      "threshold": 103.37850000000003,
+      "penalty": 299.03453403589134,
+      "description": "Very low spending trips get minimum threshold penalty",
+      "affected_trips": 250
+    },
+    "efficiency_adjustments": {
+      "very_low": {
+        "min_efficiency": 0,
+        "max_efficiency": 50,
+        "adjustment": -24.696780673877345,
+        "affected_trips": 1473,
+        "description": "Efficiency bonus/penalty for very_low efficiency"
+      },
+      "low": {
+        "min_efficiency": 50,
+        "max_efficiency": 100,
+        "adjustment": -22.62080582943478,
+        "affected_trips": 1446,
+        "description": "Efficiency bonus/penalty for low efficiency"
+      },
+      "moderate": {
+        "min_efficiency": 100,
+        "max_efficiency": 200,
+        "adjustment": 47.59495454500355,
+        "affected_trips": 1153,
+        "description": "Efficiency bonus/penalty for moderate efficiency"
+      },
+      "high": {
+        "min_efficiency": 200,
+        "max_efficiency": 300,
+        "adjustment": 33.172443670943885,
+        "affected_trips": 347,
+        "description": "Efficiency bonus/penalty for high efficiency"
+      }
+    },
+    "long_trip_spending_interaction": {
+      "min_days": 7,
+      "high_spending_multiplier": 1.5,
+      "effect": -89.40513250751867,
+      "description": "Interaction between long trips and high spending rates",
+      "affected_trips": 634
+    }
+  },
+  "existing_rules": {
+    "business_rules": {
+      "mileage_diminishing_returns": {
+        "threshold": 100,
+        "rate_per_excess_mile": -0.10487105053676707,
+        "description": "Diminishing returns on miles over 100"
+      },
+      "sweet_spot_bonus": {
+        "days": [
+          5,
+          6
+        ],
+        "bonus_amount": 78.84533546736841,
+        "bonus_percentage": 5.22135803095579,
+        "description": "5-6 day trips get sweet spot bonus"
+      },
+      "receipt_ceiling": {
+        "threshold": 2193.318,
+        "penalty_percentage": 0.05,
+        "penalty_amount": 99.4835285659641,
+        "description": "High receipts (>90th percentile) get ceiling penalty"
+      },
+      "big_trip_jackpot": {
+        "criteria": {
+          "min_days": 8,
+          "min_miles": 900,
+          "min_receipts": 1200
+        },
+        "bonus_amount": 46.66947344683966,
+        "bonus_percentage": 1.9317116007353399,
+        "description": "Big trips (8+ days, 900+ miles, $1200+ receipts) get jackpot bonus"
+      },
+      "distance_bonus": {
+        "threshold": 600,
+        "bonus_amount": 28.74861006912606,
+        "description": "Long distance trips get logistical bonus"
+      }
+    },
+    "linear_baseline": {
+      "trip_duration_days": 71.2842862836232,
+      "miles_traveled": 0.7940771809673071,
+      "total_receipts_amount": 0.29043404107582804,
+      "intercept": 318.3952155979507
+    },
+    "model_performance": {
+      "final_r2": 0.8101366466724633,
+      "final_rmse": 227.99710331722966,
+      "final_mae": 169.66829206894803
+    }
+  },
+  "mining_summary": {
+    "total_edge_rules": 5,
+    "rules_discovered": [
+      "quarter_rounding",
+      "seasonal_variations",
+      "minimum_spending_penalty",
+      "efficiency_adjustments",
+      "long_trip_spending_interaction"
+    ]
+  }
+}

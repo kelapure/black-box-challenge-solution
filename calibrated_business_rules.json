@@ -1,0 +1,50 @@
+{
+  "business_rules": {
+    "mileage_diminishing_returns": {
+      "threshold": 100,
+      "rate_per_excess_mile": -0.10487105053676707,
+      "description": "Diminishing returns on miles over 100"
+    },
+    "sweet_spot_bonus": {
+      "days": [
+        5,
+        6
+      ],
+      "bonus_amount": 78.84533546736841,
+      "bonus_percentage": 5.22135803095579,
+      "description": "5-6 day trips get sweet spot bonus"
+    },
+    "receipt_ceiling": {
+      "threshold": 2193.318,
+      "penalty_percentage": 0.05,
+      "penalty_amount": 99.4835285659641,
+      "description": "High receipts (>90th percentile) get ceiling penalty"
+    },
+    "big_trip_jackpot": {
+      "criteria": {
+        "min_days": 8,
+        "min_miles": 900,
+        "min_receipts": 1200
+      },
+      "bonus_amount": 46.66947344683966,
+      "bonus_percentage": 1.9317116007353399,
+      "description": "Big trips (8+ days, 900+ miles, $1200+ receipts) get jackpot bonus"
+    },
+    "distance_bonus": {
+      "threshold": 600,
+      "bonus_amount": 28.74861006912606,
+      "description": "Long distance trips get logistical bonus"
+    }
+  },
+  "linear_baseline": {
+    "trip_duration_days": 71.2842862836232,
+    "miles_traveled": 0.7940771809673071,
+    "total_receipts_amount": 0.29043404107582804,
+    "intercept": 318.3952155979507
+  },
+  "model_performance": {
+    "final_r2": 0.8101366466724633,
+    "final_rmse": 227.99710331722966,
+    "final_mae": 169.66829206894803
+  }
+}

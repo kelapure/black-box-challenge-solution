@@ -1,0 +1,50 @@
+{
+  "business_rules": {
+    "mileage_diminishing_returns": {
+      "threshold": 100,
+      "penalty": 56.65600618943708,
+      "applies_to": "miles_over_threshold"
+    },
+    "sweet_spot_bonus": {
+      "days": [
+        5,
+        6
+      ],
+      "bonus": 78.84533546736841,
+      "applies_to": "trip_duration_in_range"
+    },
+    "receipt_ceiling": {
+      "threshold": 2193.318,
+      "penalty": 224.5970391599895,
+      "applies_to": "receipts_over_threshold"
+    },
+    "small_receipt_penalty": {
+      "threshold": 222.09900000000002,
+      "penalty": 267.8980496039424,
+      "applies_to": "receipts_under_threshold"
+    },
+    "big_trip_jackpot": {
+      "criteria": {
+        "min_days": 8,
+        "min_miles": 900,
+        "min_receipts": 1200
+      },
+      "bonus": 46.66947344683966,
+      "bonus_percentage": 1.9317116007353399,
+      "applies_to": "all_criteria_met"
+    },
+    "distance_bonus": {
+      "threshold": 600,
+      "bonus": 28.74861006912606,
+      "applies_to": "miles_over_threshold"
+    },
+    "high_spending_penalty": {
+      "min_days": 7,
+      "spending_threshold": 118.97916666666667,
+      "penalty": 21.24668081306664,
+      "applies_to": "high_spending_on_long_trips"
+    }
+  },
+  "rule_impacts": {
+    "mileage_diminishing_returns": {
+      "affected_trips": 

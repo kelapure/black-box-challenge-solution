@@ -1,0 +1,244 @@
+{
+  "variable_coefficients": {
+    "context_dependent": {
+      "Standard": {
+        "intercept": 390.22080818248037,
+        "trip_duration_days": 49.11589668899272,
+        "miles_traveled": 1.0253498991563823,
+        "total_receipts_amount": 0.2761005419823886,
+        "improvement": 0.011710362687221254,
+        "count": 1055
+      },
+      "UltraShort": {
+        "intercept": 271.53600725671856,
+        "trip_duration_days": 68.31301768371974,
+        "miles_traveled": 0.974001187686013,
+        "total_receipts_amount": 0.32443315944395273,
+        "improvement": 0.04307912635429356,
+        "count": 655
+      },
+      "MediumStandard": {
+        "intercept": 462.5672006105567,
+        "trip_duration_days": 11.114375812258068,
+        "miles_traveled": 1.374998161529439,
+        "total_receipts_amount": 0.2576409145559083,
+        "improvement": 0.3440953412408917,
+        "count": 240
+      },
+      "MediumLuxury": {
+        "intercept": 385.14574216983465,
+        "trip_duration_days": 38.906305529119244,
+        "miles_traveled": 0.932970323980705,
+        "total_receipts_amount": 0.3869855615109321,
+        "improvement": 0.42482012807739034,
+        "count": 357
+      },
+      "UltraLong": {
+        "intercept": 176.72978504091225,
+        "trip_duration_days": 75.75433026706729,
+        "miles_traveled": 0.944598663065579,
+        "total_receipts_amount": 0.2678399758056747,
+        "improvement": 0.023966863286666196,
+        "count": 797
+      },
+      "LongTraining": {
+        "intercept": 169.87595143807835,
+        "trip_duration_days": 70.21925094282471,
+        "miles_traveled": 0.7865172016164967,
+        "total_receipts_amount": 0.35571088249150334,
+        "improvement": 0.08586562947308463,
+        "count": 520
+      },
+      "LongEfficient": {
+        "intercept": 348.74460262345156,
+        "trip_duration_days": 53.71306654384304,
+        "miles_traveled": 1.1002373728289407,
+        "total_receipts_amount": 0.3169781135972352,
+        "improvement": 0.5199148888005608,
+        "count": 104
+      },
+      "HighMileage": {
+        "intercept": 363.1707957838098,
+        "trip_duration_days": 75.08735898561521,
+        "miles_traveled": 0.8420082099778711,
+        "total_receipts_amount": 0.2886133866418304,
+        "improvement": 0.07439151854171266,
+        "count": 806
+      },
+      "ShortIntensive": {
+        "intercept": 272.06581276901966,
+        "trip_duration_days": 104.4982078326922,
+        "miles_traveled": 0.8900434472478922,
+        "total_receipts_amount": 0.27327074618797986,
+        "improvement": 0.15984075921651597,
+        "count": 382
+      },
+      "ShortEfficient": {
+        "intercept": 447.0644024977154,
+        "trip_duration_days": 74.69954665089072,
+        "miles_traveled": 0.777074258755167,
+        "total_receipts_amount": 0.37436010730344504,
+        "improvement": 0.37787513037898424,
+        "count": 84
+      }
+    },
+    "interaction_coefficients": {
+      "days_miles_MediumStandard": {
+        "coefficient": 0.2817871397852695,
+        "improvement": 0.011214653260314567,
+        "count": 240
+      },
+      "days_miles_MediumLuxury": {
+        "coefficient": 0.09003556691473612,
+        "improvement": 0.007940534535358257,
+        "count": 357
+      }
+    }
+  },
+  "dynamic_adjustments": {
+    "dynamic_thresholds": {
+      "receipt_ceiling_short": {
+        "threshold": 2450,
+        "separation": 82.31333056664722,
+        "trips": 1469
+      },
+      "receipt_ceiling_medium": {
+        "threshold": 2000,
+        "separation": 75.37108889553717,
+        "trips": 1190
+      },
+      "receipt_ceiling_long": {
+        "threshold": 2450,
+        "separation": 61.470478121175006,
+        "trips": 1395
+      },
+      "receipt_ceiling_ultra-long": {
+        "threshold": 2050,
+        "separation": 39.66410587279009,
+        "trips": 946
+      },
+      "distance_bonus_ultra-low": {
+        "threshold": 400,
+        "separation": 39.41743731440713,
+        "trips": 1473
+      },
+      "distance_bonus_low": {
+        "threshold": 775,
+        "separation": 29.102333244574616,
+        "trips": 1446
+      },
+      "distance_bonus_medium": {
+        "threshold": 425,
+        "separation": 142.70936153384204,
+        "trips": 1153
+      },
+      "distance_bonus_high": {
+        "threshold": 500,
+        "separation": 58.22246857173753,
+        "trips": 928
+      }
+    },
+    "adaptive_bonuses": {
+      "Standard": {
+        "scale_factor": 0.8421002843601896,
+        "avg_residual": 15.789971563981045,
+        "std_residual": 177.92786447021945,
+        "count": 1055
+      },
+      "UltraShort": {
+        "scale_factor": 0.5,
+        "avg_residual": 70.29025954198474,
+        "std_residual": 145.6485057692222,
+        "count": 655
+      },
+      "MediumStandard": {
+        "scale_factor": 0.5,
+        "avg_residual": 175.13566666666665,
+        "std_residual": 227.62175843018778,
+        "count": 240
+      },
+      "MediumLuxury": {
+        "scale_factor": 0.5,
+        "avg_residual": 135.42072829131652,
+        "std_residual": 151.96284685101028,
+        "count": 357
+      },
+      "UltraLong": {
+        "scale_factor": 1.3569826850690088,
+        "avg_residual": -35.69826850690088,
+        "std_residual": 183.86286960356477,
+        "count": 797
+      },
+      "LongTraining": {
+        "scale_factor": 1.8405217307692308,
+        "avg_residual": -84.05217307692308,
+        "std_residual": 168.8735155700026,
+        "count": 520
+      },
+      "LongEfficient": {
+        "scale_factor": 0.5,
+        "avg_residual": 198.46538461538464,
+        "std_residual": 128.94882745788445,
+        "count": 104
+      },
+      "HighMileage": {
+        "scale_factor": 0.5,
+        "avg_residual": 123.43548387096774,
+        "std_residual": 207.94065860616777,
+        "count": 806
+      },
+      "ShortIntensive": {
+        "scale_factor": 0.5,
+        "avg_residual": 92.1523560209424,
+        "std_residual": 175.0872640956584,
+        "count": 382
+      },
+      "ShortEfficient": {
+        "scale_factor": 0.5,
+        "avg_residual": 157.04928571428573,
+        "std_residual": 113.29451634222458,
+        "count": 84
+      }
+    },
+    "rounding_strategies": {
+      "standard_quarter": {
+        "r2": 0.8519955316742024,
+        "description": "Standard quarter rounding (multiply by 4, round, divide by 4)"
+      },
+      "context_dependent": {
+        "r2": 0.8520004968222878,
+        "improvement": 4.965148085456228e-06,
+        "description": "Context-dependent rounding precision"
+      },
+      "adaptive": {
+        "r2": 0.8520792514954998,
+        "improvement": 8.371982129740108e-05,
+        "description": "Adaptive rounding that minimizes individual errors"
+      }
+    }
+  },
+  "context_mappings": {
+    "trip_contexts": {
+      "Standard": 1055,
+      "HighMileage": 806,
+      "UltraLong": 797,
+      "UltraShort": 655,
+      "LongTraining": 520,
+      "ShortIntensive": 382,
+      "MediumLuxury": 357,
+      "MediumStandard": 240,
+      "LongEfficient": 104,
+      "ShortEfficient": 84
+    }
+  },
+  "system_summary": {
+    "total_contexts": 10,
+    "total_coefficient_categories": 2,
+    "total_dynamic_adjustments": 3,
+    "final_performance": {
+      "r2": 0.5441262072249229,
+      "rmse": 353.28977566210426,
+      "mae": 203.353102
+    }
+  }
+}

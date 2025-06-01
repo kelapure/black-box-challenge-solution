@@ -28,7 +28,7 @@ if [ ! -f "test_cases.json" ]; then
     exit 1
 fi
 
-echo "📊 Running evaluation against 1,000 test cases..."
+echo "📊 Running evaluation against $(python3 -c "import json; print(len(json.load(open('test_cases.json'))))" 2>/dev/null || echo "unknown number of") test cases..."
 echo
 
 # Initialize counters
@@ -58,7 +58,7 @@ errors = []
 
 for i, case in enumerate(test_cases):
     if i % 100 == 0:
-        print(f'Progress: {i}/1000 cases processed...', file=sys.stderr)
+        print(f'Progress: {i}/{len(test_cases)} cases processed...', file=sys.stderr)
     
     input_data = case['input']
     expected = case['expected_output']
@@ -134,7 +134,10 @@ else:
     print(f'✅ Evaluation Complete!')
     print(f'')
     print(f'📈 Results Summary:')
-    print(f'  Total test cases: 1000')
+    # Re-load test cases to get total count
+    with open('test_cases.json', 'r') as f:
+        test_cases = json.load(f)
+    print(f'  Total test cases: {len(test_cases)}')
     print(f'  Successful runs: {total_cases}')
     print(f'  Exact matches (±\$0.01): {exact_matches} ({exact_matches/total_cases*100:.1f}%)')
     print(f'  Close matches (±\$1.00): {close_matches} ({close_matches/total_cases*100:.1f}%)')
@@ -143,24 +146,24 @@ else:
     print(f'')
 
     # Calculate score (lower is better)
-    score = avg_error * 100 + (1000 - exact_matches) * 0.1
+    score = avg_error * 100 + (len(test_cases) - exact_matches) * 0.1
     print(f'🎯 Your Score: {score:.2f} (lower is better)')
     print(f'')
 
-    if exact_matches == 1000:
+    if exact_matches == len(test_cases):
         print('🏆 PERFECT SCORE! You have reverse-engineered the system completely!')
-    elif exact_matches > 950:
+    elif exact_matches > len(test_cases) * 0.95:
         print('🥇 Excellent! You are very close to the perfect solution.')
-    elif exact_matches > 800:
+    elif exact_matches > len(test_cases) * 0.8:
         print('🥈 Great work! You have captured most of the system behavior.')
-    elif exact_matches > 500:
+    elif exact_matches > len(test_cases) * 0.5:
         print('🥉 Good progress! You understand some key patterns.')
     else:
         print('📚 Keep analyzing the patterns in the interviews and test cases.')
 
     print(f'')
     print(f'💡 Tips for improvement:')
-    if exact_matches < 1000:
+    if exact_matches < len(test_cases):
         worst_cases = sorted(results, key=lambda r: r[\"error\"], reverse=True)[:5]
         print(f'  Check these high-error cases:')
         for case in worst_cases:
